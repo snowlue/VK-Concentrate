@@ -11,6 +11,8 @@
   2. Установите скрипт через [Github](https://github.com/PaveTranquil/VK-Concentrate/raw/main/vk-concentrate.user.js), [OpenUserJS](https://openuserjs.org/scripts/PaveTranquil/VK_Concentrate) или [Greasy Fork](https://greasyfork.org/ru/scripts/427175-vk-concentrate)
   3. Откройте [ВКонтакте](https://vk.com/im) и нажмите Alt+A.
 
+Если вы нашли баг, у вас есть предложение, идея или вопрос, то [создайте новый issue](https://github.com/PaveTranquil/VK-Concentrate/issues/new). Спасибо ;)
+
 Code: [Павел Овчинников](https://github.com/pavetranquil),<br>
 Idea: [Евгений Виткалов](https://github.com/evvitkalov),<br>
 Start: [Евгений Котляров](https://github.com/flyink13).
