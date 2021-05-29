@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.0
+// @version      1.1
 // @author       PaveTranquil
 // @match        https://vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
@@ -42,7 +42,7 @@ var is_enabled = false; // Переключатель состояния адд�
 var style =
     // Скрываем сайдбар и сдвигаем основной блок на центр
     ".side_bar {display: none;}" +
-    "[dir=ltr] .fl_r {padding-right: 82px;}" +
+    "[dir] #page_body {padding-right: 82px;}" +
 
     // Скрываем из хедера поиск, колокол и лишние подписи
     "[dir=ltr] .HeaderNav__item--gap {display: none;}" +
