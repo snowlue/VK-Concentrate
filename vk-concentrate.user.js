@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.1
+// @version      1.2
 // @author       PaveTranquil
 // @match        https://vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
