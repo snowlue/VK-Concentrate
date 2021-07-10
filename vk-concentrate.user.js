@@ -49,6 +49,7 @@ var style =
     ".HeaderNav__btns {display: none;}" +
     ".TopNavBtn__profileArrow {display: none;}" +
     ".TopNavBtn__profileName {display: none;}" +
+    "[dir] .HeaderNav__item:first-child {padding: 3px;}" +
     "[dir=ltr] .TopNavBtn__profileLink {padding-left: 0px;}" +
 
     // В плеере ставим центровку и отключаем разворачивание плейлиста
