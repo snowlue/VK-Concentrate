@@ -6,6 +6,8 @@
   2. Чистый хедер — ни поиска, ни колокольчика, только плеер, лого и ваша аватарка
   3. Основной блок с самым важным по центру
 
+![for userscript](https://user-images.githubusercontent.com/22418658/130481000-e02d35f1-7353-4d8e-8ff1-494b30c74c2b.png)
+
 ### Установка:
   1. Поставьте расширение [Tampermonkey](https://tampermonkey.net) или [Greasemonkey](https://www.greasespot.net)
   2. Установите скрипт через [Github](https://github.com/PaveTranquil/VK-Concentrate/blob/main/vk-concentrate.user.js#:~:text=Raw), [OpenUserJS](https://openuserjs.org/scripts/PaveTranquil/VK_Concentrate) или [Greasy Fork](https://greasyfork.org/ru/scripts/427175-vk-concentrate)
