@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.2
+// @version      1.3
 // @author       PaveTranquil
 // @match        https://vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
@@ -19,7 +19,7 @@ window.addEventListener("keydown", function(e){
     if (!is_enabled) {
         // Если отключён, создаём CSS-стили и включаем переключатель
         var style_elem = document.createElement("style");
-        style_elem.className = "dialog_fullscreen";
+        style_elem.className = "content_fullscreen";
         document.head.appendChild(style_elem).innerHTML = style;
         document.getElementById("chat_onl_wrap").style = "display: none"; // Отключаем мини-чат
 
@@ -28,7 +28,7 @@ window.addEventListener("keydown", function(e){
     }
     else {
         // Если включён, разрушаем тег CSS-стилей и отключаем переключатель
-        var style_elem = document.head.getElementsByClassName("dialog_fullscreen");
+        var style_elem = document.head.getElementsByClassName("content_fullscreen");
         style_elem[0].parentNode.removeChild(style_elem[0]);
         document.getElementById("chat_onl_wrap").style = "display: block"; // Включаем мини-чат
 
@@ -57,3 +57,9 @@ var style =
     ".TopHomeLink {width: auto;}" +
     ".top_audio_player_btn {pointer-events: all;}" +
     ".top_audio_player.top_audio_player_enabled {pointer-events: none;}";
+
+
+if (document.location.href.indexOf("vk.com/bugs") + 1) { // Проверяем, не находимся ли мы на vk.com/bugs
+    style = style + "[dir] #page_body {padding-right: 123px;}" +
+                    ".narrow_column_wrap {display: none;}" // Если находимся, то подключаем спец.стили
+}
