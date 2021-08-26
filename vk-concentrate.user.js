@@ -59,7 +59,7 @@ var style =
     ".top_audio_player.top_audio_player_enabled {pointer-events: none;}";
 
 
-if (document.location.href.indexOf("vk.com/bugs") + 1) { // Проверяем, не находимся ли мы на vk.com/bugs
+if (document.location.href.indexOf("vk.com/bug") + 1) { // Проверяем, не находимся ли мы на vk.com/bugs или vk.com/bug123
     style = style + "[dir] #page_body {padding-right: 123px;}" +
                     ".narrow_column_wrap {display: none;}" // Если находимся, то подключаем спец.стили
 }
