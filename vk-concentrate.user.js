@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.4
+// @version      1.5
 // @author       PaveTranquil
 // @match        https://*.vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
@@ -54,10 +54,9 @@ var style =
 
     // В плеере ставим центровку и отключаем разворачивание плейлиста
     ".HeaderNav__item--player {flex-grow: 0; margin-right: auto;}" +
+    ".eltt_bottom {left: -361.7375px !important;}" +
     ".HeaderNav__btns {margin-left: auto;}" +
-    ".TopHomeLink {width: auto;}" +
-    ".top_audio_player_btn {pointer-events: all;}" +
-    ".top_audio_player.top_audio_player_enabled {pointer-events: none;}";
+    ".TopHomeLink {width: auto;}";
 
 
 if (document.location.href.indexOf("vk.com/bug") + 1) { // Проверяем, не находимся ли мы на vk.com/bugs или vk.com/bug123
