@@ -6,7 +6,7 @@
   2. Чистый хедер — ни поиска, ни колокольчика, только плеер, лого и ваша аватарка
   3. Основной блок с самым важным по центру
 
-![for userscript](https://user-images.githubusercontent.com/22418658/131205384-96c57074-39b6-4586-9ed6-afa965003f36.png)
+![for userscript](https://user-images.githubusercontent.com/22418658/131984506-dcd803eb-5527-4c28-b63d-b7dfb015bbbd.png)
 
 ### Установка:
   1. Поставьте расширение [Tampermonkey](https://tampermonkey.net) или [Greasemonkey](https://www.greasespot.net)
