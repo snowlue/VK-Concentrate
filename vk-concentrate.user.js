@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.5.1
+// @version      1.5.2
 // @author       PaveTranquil
 // @match        https://*.vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
@@ -23,7 +23,6 @@ window.addEventListener("keydown", function(e){
         var style_elem = document.createElement("style");
         style_elem.className = "content_fullscreen";
         document.head.appendChild(style_elem).innerHTML = style;
-        document.getElementById("chat_onl_wrap").style = "display: none"; // Отключаем мини-чат
 
         is_enabled = true;
         console.log("VK Concentrate is enabled.");
@@ -32,7 +31,6 @@ window.addEventListener("keydown", function(e){
         // Если включён, разрушаем тег CSS-стилей и отключаем переключатель
         var style_elem = document.head.getElementsByClassName("content_fullscreen")[0];
         style_elem.parentNode.removeChild(style_elem);
-        document.getElementById("chat_onl_wrap").style = "display: block"; // Включаем мини-чат
 
         is_enabled = false;
         console.log("VK Concentrate is disabled.");
@@ -42,13 +40,15 @@ window.addEventListener("keydown", function(e){
 var is_enabled = false; // Переключатель состояния аддона
 
 var style =
-    // Скрываем сайдбар и сдвигаем основной блок контента на центр
+    // Скрываем сайдбар с мини-чатом и сдвигаем основной блок контента на центр
     ".side_bar {display: none;}" +
+    ".FCPanel {display: none;}" +
     "[dir] #page_body {padding-right: 82px;}" +
 
-    // Скрываем из хедера поиск, колокольчик и лишние подписи
+    // Скрываем из хедера поиск, колокольчик, кнопку экосистемы и лишние подписи
     "[dir=ltr] .HeaderNav__item--gap {display: none;}" +
     ".top_notify_btn {display: none;}" +
+    ".TopNavBtn__ecosystemMenuLink {display: none;}" +
     ".TopNavBtn__profileArrow {display: none;}" +
     ".TopNavBtn__profileName {display: none;}" +
     "[dir] .HeaderNav__item:first-child {padding: 3px;}" +
