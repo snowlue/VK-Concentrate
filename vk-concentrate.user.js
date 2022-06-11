@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.5.2
+// @version      1.5.3
 // @author       PaveTranquil
 // @match        https://*.vk.com/*
 // @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
@@ -45,7 +45,7 @@ var style =
     ".FCPanel {display: none;}" +
     "[dir] #page_body {padding-right: 82px;}" +
 
-    // Скрываем из хедера поиск, колокольчик, кнопку экосистемы и лишние подписи
+    // Скрываем из хедера поиск, колокольчик, кнопку экосистемы (по возможности) и лишние подписи
     "[dir=ltr] .HeaderNav__item--gap {display: none;}" +
     ".top_notify_btn {display: none;}" +
     ".TopNavBtn__ecosystemMenuLink {display: none;}" +
@@ -55,10 +55,10 @@ var style =
     "[dir=ltr] .TopNavBtn__profileLink {padding-left: 0px;}" +
 
     // В плеере ставим центровку
-    ".HeaderNav__item--player {flex-grow: 0; margin-right: auto;}" +
-    ".eltt_bottom {left: -361.7375px !important;}" +
-    ".HeaderNav__btns {margin-left: auto;}" +
-    ".TopHomeLink {width: auto;}";
+    ".eltt_bottom {left: 9px !important;}" +
+    ".TopNavBtn__audio {margin-left: auto; margin-right: auto;}" +
+    ".TopHomeLink {width: auto;}" +
+    "[dir=ltr] .top_audio_player.top_audio_player_enabled {margin-left: auto; margin-right: auto;}";
 
 // Проверяем, не находимся ли мы на vk.com/bugs или vk.com/bug123
 if (document.location.href.indexOf("vk.com/bug") + 1) {
