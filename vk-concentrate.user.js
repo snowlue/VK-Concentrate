@@ -3,9 +3,9 @@
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
 // @version      1.5.3
-// @author       PaveTranquil
+// @author       snowlue
 // @match        https://*.vk.com/*
-// @copyright    2021, PaveTranquil (https://vk.com/pavetranquil)
+// @copyright    2025, snowlue (https://vk.com/snowlue)
 // @license      MIT
 // @grant        none
 // ==/UserScript==
