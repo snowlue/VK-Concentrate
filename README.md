@@ -1,7 +1,7 @@
 # VK Concentrate
-[![Use it on Tampermonkey](https://img.shields.io/badge/Use%20it%20on-Tampermonkey-00485b?logo=tampermonkey)](https://github.com/PaveTranquil/VK-Concentrate/raw/main/vk-concentrate.user.js) ![Made with JavaScript](https://img.shields.io/badge/Made%20with%20-JavaScript-F7E01D?logo=javascript)
+[![Use it on Tampermonkey](https://img.shields.io/badge/Use%20it%20on-Tampermonkey-00485b?logo=tampermonkey&style=flat-square)](https://github.com/PaveTranquil/VK-Concentrate/raw/main/vk-concentrate.user.js) ![Made with JavaScript](https://img.shields.io/badge/Made%20with%20-JavaScript-F7E01D?logo=javascript&style=flat-square)
 
-Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном. <br>
+Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном.  
 **VK Concentrate** — это:
   1. Никакого сайдбара и мини-чата
   2. Чистый хедер — ни поиска, ни колокольчика, только плеер, лого и ваша аватарка
@@ -16,6 +16,6 @@
 
 Если вы нашли баг, у вас есть предложение, идея или вопрос, то [создайте новый issue](https://github.com/PaveTranquil/VK-Concentrate/issues/new). Спасибо ;)
 
-Code: [Павел Овчинников](https://github.com/pavetranquil),<br>
-Idea: [Евгений Виткалов](https://github.com/evvitkalov),<br>
+Code: [Павел Овчинников](https://github.com/pavetranquil),  
+Idea: [Евгений Виткалов](https://github.com/evvitkalov),  
 Start: [Евгений Котляров](https://github.com/flyink13).
