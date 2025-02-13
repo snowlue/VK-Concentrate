@@ -2,7 +2,7 @@
 // @name         VK Concentrate
 // @namespace    http://tampermonkey.net/
 // @description  Нажмите Alt+A на любой странице ВКонтакте и сконцентрируйтесь на важном
-// @version      1.5.3
+// @version      1.5.4
 // @author       snowlue
 // @match        https://*.vk.com/*
 // @copyright    2025, snowlue (https://vk.com/snowlue)
@@ -13,14 +13,15 @@
 
 window.addEventListener("keydown", function(e){
     // Проверяем Alt+A
-    if (!e.altKey || e.keyCode !== 65) return;
+    if (!e.altKey || e.code !== "KeyA") return;
     // Проверяем, не находимся ли мы на VK Видео
     if (document.location.href.indexOf("vk.com/video") + 1) return;
 
+    let style_elem;
     // Проверяем, включен ли аддон
     if (!is_enabled) {
         // Если отключён, создаём CSS-стили и включаем переключатель
-        var style_elem = document.createElement("style");
+        style_elem = document.createElement("style");
         style_elem.className = "content_fullscreen";
         document.head.appendChild(style_elem).innerHTML = style;
 
@@ -29,7 +30,7 @@ window.addEventListener("keydown", function(e){
     }
     else {
         // Если включён, разрушаем тег CSS-стилей и отключаем переключатель
-        var style_elem = document.head.getElementsByClassName("content_fullscreen")[0];
+        style_elem = document.head.getElementsByClassName("content_fullscreen")[0];
         style_elem.parentNode.removeChild(style_elem);
 
         is_enabled = false;
@@ -37,9 +38,9 @@ window.addEventListener("keydown", function(e){
     }
 });
 
-var is_enabled = false; // Переключатель состояния аддона
+let is_enabled = false; // Переключатель состояния аддона
 
-var style =
+let style =
     // Скрываем сайдбар с мини-чатом и сдвигаем основной блок контента на центр
     ".side_bar {display: none;}" +
     ".FCPanel {display: none;}" +
